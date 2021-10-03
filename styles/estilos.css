@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Paytone One", sans-serif;
+}
+
+/* -----------------------------------------------------------------------Barra principal */
+header {
+    width: 100%;
+    background: rgb(27, 38, 50);
+    background: rgb(0, 0, 0);
+    min-width: 325px;
+}
+
+.container{
+ max-width: 90%;
+ height:auto;
+ margin:0 auto;
+ display: flex;
+ justify-content:space-between;
+ align-items: center;
+ min-width: 325px;
+}
+
+.logo{
+    margin: 0.8em 0 ;
+    padding: 0;
+    object-fit: contain;
+
+}
+
+.text {
+    display: inline-block;
+    color:rgb(255, 255, 255);
+    position: relative;
+    text-decoration: none;
+    padding: 0 .8em;
+}
+.text::after {
+    content: "";
+    background: #fff;
+    mix-blend-mode: exclusion;
+    width: calc(100% + 20px);
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: -10px;
+    transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.text:hover::after {
+    height: calc(100% + 8px);
+}
+
+@media (max-width: 600px) {
+    .text {
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        /* display: inherit; */
+    }
+}
+
+/* -----------------------------------------------------------------------Imagen */
+#inicio{
+    width: 100%;
+    background: url(../img/hiker-gfdaba781c_1920.jpg);
+    background-position:center;
+    background-size:cover;
+    min-width: 325px;
+}
+.fondoNegro{
+    background: rgba(0, 0, 0, 0.541);
+    max-width:100%;
+    height: 100%;
+    margin:auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 325px;
+}
+h1{
+    padding: 5em 0 5em 0;
+    font-size: 3em;
+    color: white;
+    text-shadow: -2px -2px 2px black;
+    text-shadow: -2px -2px 2px black;
+    text-shadow: -2px -2px 2px black;
+
+}
+
+/* -----------------------------------------------------------------------Fichas */
+
+.ficha{
+    margin: 5em 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 325px;
+}
+h2{
+    text-align: center;
+}
+
+#promos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    max-width: 80%;
+    min-width: 325px;
+
+}
+
+.card{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 9px;
+    min-width: 300px;
+    max-width: 25%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    margin: 30px 20px;
+}
+.boton{
+    background: black;
+    border-radius: 9px;
+    text-decoration: none;
+    padding:0.5rem;
+    color:#fff;
+}
+
+.img{
+    width: 70%;
+    margin: auto;
+    border-radius: 9px;
+}
+
+/* -----------------------------------------------------------------------MOKUP */
+
+.moku_ficha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 325px;
+
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.767);
+
+    opacity: 0;
+    visibility: hidden;
+}
+h2{
+    text-align: center;
+}
+
+#moku_promos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    max-width: 80%;
+    min-width: 325px;
+}
+
+.moku_card{
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 9px;
+    min-width: 300px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    margin: 30px 20px;
+
+    width: 40%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.795);
+
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+   
+}
+/* .mokuClose{
+    transform: translateY(-200%);
+} */
+
+.moku_boton{
+    background: black;
+    border-radius: 9px;
+    text-decoration: none;
+    padding:0.5rem;
+    color:#fff;
+}
+
+.moku_img{
+    width: 50%;
+    margin: auto;
+    border-radius: 9px;
+    
+}
+
+.moku_p{
+    padding: 30px 30px 0 30px;
+    font-size: 20px;
+}
+@media (max-height: 460px) {
+    .moku_card {
+        width: 100%;
+    }
+    .moku_img{
+        width: 20%;
+    }
+    .moku_p{
+        padding: 0px 10px 0 10px;
+        font-size: 20px;
+    }
+}
+
+/* --------------------------------------------------PIE DE PAGINA */
+
+.footer {
+    margin-top: 40px;
+    padding-top: 40px;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    z-index: 19999999;
+    border-top: 4px solid #000000;
+    min-width: 325px;
+}
+.footer .menu{
+    min-width: 20px;
+    margin: 0px 25px 15px 15%;
+
+}
+.footer .menu a{
+    display: block;
+    padding: 0px 0px 15px ;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.footer .menu a:hover{
+    color: #ffffff;
+    background-color: black;
+}
+
